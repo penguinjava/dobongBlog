@@ -4,6 +4,7 @@ import { fileURLToPath, URL } from 'node:url'
 
 export default defineConfig({
   plugins: [vue()],
+  base: '/godlife/',
   css:{
     postcss: './postcss.config.js'
   },
@@ -15,9 +16,19 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:3443',
+        target: 'https://localhost:3443',
         changeOrigin: true
       },
     },
+  },
+  build: {
+    outDir: 'dist',
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true,
+      }
+    }
   },
 })

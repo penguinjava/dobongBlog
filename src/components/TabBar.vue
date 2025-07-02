@@ -2,13 +2,13 @@
 <script setup lang="ts">
 // 왼쪽 메뉴 - 일정
 const leftNavItem = {
-  icon: '/images/scheduleButton.png',
+  icon: 'images/scheduleButton.png',
   to: '/schedule'
 }
 
 // 오른쪽 메뉴
 const rightNavItem = {
-  icon: '/images/profileButton.png',
+  icon: 'images/profileButton.png',
   to: '/profile'
 }
 </script>
